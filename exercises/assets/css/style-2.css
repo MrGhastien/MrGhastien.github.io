@@ -3,7 +3,7 @@
 *, *::before, *::after { box-sizing: border-box }
 html { height: 100%; font-size: 100%; font: inherit; vertical-align: baseline;
 scroll-behavior: smooth; scroll-padding-top: 20px }
-body { max-width: 1600px; line-height: 1.5; margin-left: auto; margin-right: auto; 
+body { max-width: 1920px; line-height: 1.5; margin-left: auto; margin-right: auto; 
 min-height: 100vh; text-rendering: optimizeSpeed }  
 img { width: 100%; height: auto; display: block }
 h1, h2, h3, h4 { width: 100% }
@@ -12,13 +12,39 @@ input, button, textarea, select { font: inherit }
 /* ================= ENDS ================ */
 
 /* Desktops */
-@media (min-width: 768px) { body { padding: 4% 20% } }
+@media (min-width: 768px) { section { padding: 4% 20% } }
 
 /* Mobiles */
-@media (max-width: 767px) { body { padding: 12% 8% } }
+@media (max-width: 767px) { section { padding: 12% 8% } }
+
+body {
+    background-color: lightcyan;
+}
 
 section {
-    padding: 5% 5% 5% 5%;
+    /*padding: 5% 5% 5% 5%;*/
+    background-color: palegreen;
+}
+
+.section-1 {
+    background-color: firebrick;
+}
+
+.section-1 h2,
+.section-1 p {
+    color: antiquewhite;
+}
+
+.section-2 {
+    background-color: beige;
+}
+
+.section-3 {
+    background-color: lightcoral;
+}
+
+.section-4 {
+    background-color: paleturquoise;
 }
 
 h1 {
@@ -27,16 +53,19 @@ h1 {
     font-weight: normal;
     letter-spacing: -2px;
     margin-bottom: 32px;
+    color: darkslateblue;
 }
 
 h2 {
     font-size: 36px;
     margin-bottom: 4px;
+    color: darkslateblue;
 }
 
 h3 {
     font-size: 24px;
     margin-bottom: 4px;  
+    color: darkslateblue;
 }
 
 p {
@@ -44,4 +73,5 @@ p {
     font-family: sans-serif;
     line-height: 1.6;
     margin-bottom: 20px;
+    color: darkslateblue;
 }
