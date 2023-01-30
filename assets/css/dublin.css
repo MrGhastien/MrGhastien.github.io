@@ -1,20 +1,23 @@
+
 /*  ============= WEB BROWSER RESETS ============ */
 * { margin: 0; padding: 0; border: none }
 *, *::before, *::after { box-sizing: border-box }
 html { height: 100%; font-size: 100%; font: inherit; vertical-align: baseline;
 scroll-behavior: smooth; scroll-padding-top: 20px }
-body { max-width: 1920px; line-height: 1.5; margin-left: auto; margin-right: auto; 
-min-height: 100vh; text-rendering: optimizeSpeed }  
+body { line-height: 1.5; min-height: 100vh }
+@media (max-width: 767px ) { body { text-rendering: optimizeSpeed } }
+@media (min-width: 768px ) { body { text-rendering: optimizeLegibility } }
 img { width: 100%; height: auto; display: block }
-h1, h2, h3, h4 { width: 100% }
-input, button, textarea, select { font: inherit }
 
-/* ================= ENDS ================ */
+/* ============ CUSTOM PROPERTIES ============  */
+
 :root {
-    /* Nicer than default sans-serif font */
+    /* Nicer than Windows default sans-serif font */
     --font-sans: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
     --font-serif: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+    /* Nicer than Windows default monospace font */
     --font-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* Default font */
     --global-font: var(--font-sans);
 
     /* Color variables */
@@ -231,102 +234,105 @@ input, button, textarea, select { font: inherit }
     --trend-800: #1f364d;
     --trend-900: #0e2439;
 
-    /* Spacing variables */
-    /* --max-width: 1920px; */
-    --max-content-width: 1920px;
-    --spacing-xs: 2.5%;
-    --spacing-s: 5%;
-    --spacing-m: 10%;
-    --spacing-l: 15%;
-    --spacing-xl: 20%;
-
-    --overlay-opacity: 0.3;
-    --overlay-color: rgba(255, 0, 0, var(--overlay-opacity));
-    --overlay-trans: transparent;
+    /* Fluid font scale */
+	--font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+	--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.29rem);
+	--font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+	--font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+	--font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+	--font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+	--font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 }
 
-/* Desktops */
-@media (min-width: 768px) {
-    section { padding: 4% 20% }
-    section.w-800px > * { max-width: 800px; margin-left: auto; margin-right: auto; }
-    section.w-1024px > * { max-width: 800px; margin-left: auto; margin-right: auto; }
-    section.w-1140px > * { max-width: 800px; margin-left: auto; margin-right: auto; }
-    section.w-1536px > * { max-width: 800px; margin-left: auto; margin-right: auto; }
+/* Global font */
+body { font-family: var(--global-font) }
+
+
+/*  ========== SECTIONS ============ */
+
+section { position: relative; overflow: hidden }
+
+/* When section content width less than viewport width,
+equalise horizontal spacing at left and right */
+section > * { margin-left: auto; margin-right: auto }
+
+/* Zero bottom margin under last item in any section */
+section *:last-child { margin-bottom: 0 !important }
+
+/* Wide screens */
+@media (min-width: 1441px) {
+	section { padding: 3% 4% }
+	/* Max content width */
+	section > * { max-width: 1356px }
 }
+
+/* Desktops / Laptops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    section { padding: 5% 4% }
+	/* Max content width */
+    section > * { max-width: 1280px }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) { section { padding: 5% 6% } }
 
 /* Mobiles */
-@media (max-width: 767px) { section { padding: 12% 8% } }
+@media (max-width: 767px) { section { padding: 32px 9% 42px 9% } }
 
-body {
-    background-color: lightcyan;
-    font-family: 'Roboto', sans-serif;
+/* Narrow columns */
+section.w-820px >  * { max-width: 820px }
+section.w-1024px > * { max-width: 1024px }
+section.w-1140px > * { max-width: 1140px }
+
+/* Typeography */
+section > h2 {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    line-height: 1.2;
+	letter-spacing: -1px;
 }
 
-section {
-    /*padding: 5% 5% 5% 5%;*/
-    background-color: palegreen;
+@media (min-width: 768px) { section > h2 { margin-bottom: 32px } }
+@media (max-width: 768px) { section > h2 { margin-bottom: 12px } }
+
+section > h3 {
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-section p {
-    font-family: 'Montserrat', sans-serif;
+@media (min-width: 768px) { section > h3 { margin-top: 32px; margin-bottom: 4px } }
+@media (max-width: 768px) { section > h3 { margin-top: 18px; margin-bottom: 2px } }
+
+section > p {
+	font-size: var(--font-size-base);
+	margin-bottom: 16px
 }
 
-.section-1 {
-    background-color: firebrick;
+/* Badges */
+section > .badge span {
+    display: inline-block;
+    padding: 2px 10px;
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    letter-spacing: 2px;
 }
 
-.section-1 h2,
-.section-1 p {
-    color: antiquewhite;
-}
 
-.section-2 h2,
-.section-2 p {
-    color: lightgrey;
-}
+@media (min-width: 768px) { section > .badge { margin-bottom: 42px } }
+@media (max-width: 767px) { section > .badge { margin-bottom: 24px } }
 
-.section-2 {
-    background-image: linear-gradient(90deg, lightblue, blue);
-}
+section > .badge.corners-soft { border-radius: 16px; padding-left: 14px; padding-right: 14px }
 
-.section-3 {
-    background-color: lightcoral;
-}
 
-.section-4 {
-    background-image: linear-gradient(-90deg, palegreen, blue);
-}
+/* ============ UTILITY CLASSES ============== */
 
-.section-4 h2,
-.section-4 p {
-    color: lightcyan;
-}
+/* Horozontal alignment */
+.text-center { text-align: center; margin-left: auto; margin-right: auto }
 
-h1 {
-    font-size: 84px;
-    text-align: center;
-    font-weight: normal;
-    letter-spacing: -2px;
-    margin-bottom: 32px;
-    color: darkslateblue;
+@media (min-width: 768px) { .text-center-desktop {
+   text-align: center; margin-left: auto; margin-right: auto  }
 }
-
-h2 {
-    margin-bottom: 4px;
-    color: darkslateblue;
-    font-size: calc(22px + (42 - 22) * ((100vw - 320px) / (1600 - 320)));
-}
-
-h3 {
-    font-size: 24px;
-    margin-bottom: 4px;  
-    color: darkslateblue;
-}
-
-p {
-    font-family: sans-serif;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: darkslateblue;
-    font-size: calc(15px + (24 - 15) * ((100vw - 320px) / (1600 - 320)));
+@media (max-width: 767px) { .text-center-mobile  {
+    text-align: center; margin-left: auto; margin-right: auto }
 }
