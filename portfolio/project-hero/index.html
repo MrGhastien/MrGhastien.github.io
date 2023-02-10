@@ -21,8 +21,9 @@
     <!-- Font Awesome 6 icons. Delete if not using. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  </head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
+  </head>
 
   <body>
 
@@ -107,5 +108,25 @@
 
     <script src="https://lunevedy.com/assets/js/lunevedy.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>
+    window.cookieconsent.initialise({
+    "palette": {
+    "popup": {
+    "background": "#252e39"
+    },
+    "button": {
+    "background": "transparent",
+    "text": "#14a7d0",
+    "border": "#14a7d0"
+    }
+    },
+    "type": "opt-in",
+    "content": {
+    "link": "Privacy policy",
+    "href": "./privacy.html"
+    }
+    });
+  </script>
   </body>
 </html>
