@@ -1,0 +1,55 @@
+/* Add custom style here  */
+#hero-1 header.theme-dark { background-color: var(--blue-700) }
+
+#hero-3, #hero-4, #hero-5, #hero-6, #hero-7, #hero-8 { margin-top: 80px }
+
+#hero-2 header.hero-bg > .container-overlay { background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)); } 
+
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):link,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):visited { color: var(--white-000) }
+
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):focus,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):hover,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):active { color: var(--black-000) }
+
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):link,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):visited { background-color: var(--green-500) }
+
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):focus,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):hover,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):active { background-color: var(--green-400) }
+
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):link,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):visited { border-color: var(--green-500) }
+
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):focus,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):hover,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(1):active { border-color: var(--green-400) }
+
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):link,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):visited { color: var(--white-000) }
+
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):focus,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):hover,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):active { color: var(--black-000) }
+
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):link,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):visited { background-color: var(--green-500) }
+
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):link,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):visited { border-color: var(--green-500) }
+
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):focus,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):hover,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):active { background-color: var(--green-400) }
+
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):focus,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):hover,
+#hero-2 header.theme-dark .container-btn a.btn:nth-child(2):active { border-color: var(--green-400) }
+
+#hero-2 header.theme-dark h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-weight: 400;
+      letter-spacing: 4px;
+      font-size: calc(72px + (132 - 72) * ((100vw - 320px)/ (1600 - 320)));
+   }
