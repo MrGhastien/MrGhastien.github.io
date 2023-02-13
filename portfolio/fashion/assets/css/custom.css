@@ -1,0 +1,16 @@
+/* Add your custom CSS here */
+
+body {
+    font-family: "Playfair Display", serif;
+}
+
+.section-selector-1 {
+    /*background-color: var(--red-500);*/
+    background-image: linear-gradient(180deg, var(--red-500), var(--rose-500));
+}
+
+.section-selector-2 { background-color: var(--gray-200) }
+
+.section-selector-4 { background-color: var(--slate-700) }
+.section-selector-4 div[class^='flex-cols-'] div[class^='col-'] figure.icon { color: var(--gray-100) }
+
