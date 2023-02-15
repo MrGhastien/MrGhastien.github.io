@@ -1,0 +1,8 @@
+
+header.theme-light {
+    background-color: #778899;
+    min-height: 90vh;
+}
+
+header { background-color: var(--slate-600);
+       }
