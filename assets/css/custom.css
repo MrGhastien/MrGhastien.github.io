@@ -1,8 +1,81 @@
+body {
+    background: #282828;
+    color: #f0f0f0;
+    /*font-family: "Fira Code", monospace;*/
+    margin: 0px;
+}
+
+main {
+    color: #282828;
+    background: #f0f0f0;
+    width: 100vw;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home {
+    height: calc(100vh + 53px);
+}
 
 header.theme-light {
     background-color: #778899;
     min-height: 90vh;
 }
 
-header { background-color: var(--slate-600);
-       }
+header {
+    background-color: var(--slate-600);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.canvas {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.canvas canvas {
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    position: relative;
+}
+
+.btn {
+    padding: 10px;
+    background: #ccc;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #1b1b1b;
+}
+
+.btn.btn-outline:hover,
+.btn.btn-solid:hover {
+    border-color: #ccc;
+    color: #111;
+}
+
+#name-container {
+    margin: 0;
+}
+
+div h1 {
+    font-family: "Fira Code";
+    font-weight: 800;
+    font-size: 40px;
+}
+
+div h2 {
+    font-family: "Iosevka Custom";
+    font-weight: 300;
+    font-size: 28px;
+}

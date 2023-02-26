@@ -1,0 +1,36 @@
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+header h1 {
+    font-size: var(--font-size-xxxl);
+}
+
+.section-selector-1 {
+    background-color: var(--trend-700);
+}
+
+.section-selector-1 > .badge span {
+    color: var(--white-000);
+    background-color: var(--trend-700);
+    text-transform: uppercase;
+}
+
+.section-selector-2 {
+    background-color: var(--trend-800);
+}
+
+.section-selector-3 {
+    background-color: var(--trend-700);
+}
+
+.section-selector-4 { background-color: var(--trend-700) }
+.section-selector-4 div[class^='flex-cols-'] div[class^='col-'] figure.icon { color: var(--blue-300) }
+
+.section-selector-1 h2,
+.section-selector-2 h2,
+.section-selector-3 h2,
+.section-selector-4 h2 {
+    font-weight: 400;
+}
