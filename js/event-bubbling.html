@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <style>
+      #outerDIV {
+          background-color: lightgreen;
+          padding: 100px 100px;
+          max-width: 500px;
+      }
+      #bigBtn {
+          background-color: green;
+          color: white;
+          padding: 20px 40px;
+          
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Some heading here</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium explicabo similique optio neque,
+      ipsum ducimus minima cumque eos molestiae laboriosam debitis. Amet ea cum praesentium quia pariatur doloremque atque quod!</p>
+    <div id="outerDIV">
+      <button id="bigBtn">Change background to Green</button>
+    </div>
+  </body>
+  <script>
+    const outerDiv = document.getElementById('outerDIV');
+    const bigBtn = document.getElementById('bigBtn');
+
+    // Event listener executed during the bubble (second, up) phase.
+    outerDIV.addEventListener('click', e => {
+        console.log(`Capture phase: click event on outer div - but action executed`);
+        document.body.style.backgroundColor= 'red';
+    });
+
+    // Event listener executed during the bubbling (second, up) phase.
+    bigBtn.addEventListener('click', (e) => {
+        console.log('Capture phase: click event on button - but action executed');
+        console.log('Bubble phase:  action now executed');
+        e.stopPropagation();
+        document.body.style.backgroundColor= 'green';
+    });
+  </script>
+</html>

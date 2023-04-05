@@ -1,0 +1,201 @@
+<!doctype HTML>
+<html lang="en_GB">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Working with the DOM - JavaScript Exercises</title>
+  <meta name="description" content="About HTML Files: A Web Design and Development Tutorial from Brendan Munnelly">
+
+  <link rel="stylesheet" href="./dom.css">
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Working with the DOM: <span>Exercises</span></h1>
+    <p>Display this web page in <a href="https://www.brave.com" target="_blank" rel="noopener">Brave</a> or other,
+      lesser web browsers.</p>
+
+    <p>Also open the page in a code editor. <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS
+        Code</a>, <a href="https://vscode.dev/" target="_blank" rel="noopener">VS Code
+        Online</a> or <a href="https://www.sublimetext.com/" target="_blank" rel="noopener"> Sublime Text</a>
+      are all are good choices.</p>
+
+    <p>Follow the exercises in the online Lesson: <a href="../index.html">Working with the DOM</a></p>
+
+    <p>✅ &nbsp;Happy coding.</p>
+  </header>
+
+  <main>
+    <article>
+
+      <section class="w-960px">
+
+        <div id="page-content">
+          <h2>Sample heading</h2>
+
+          <h3>Small heading 1</h3>
+          <p class="light-text">Paragraph 1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            aliquid, distinctio ipsa pariatur exercitationem voluptate illo accusamus in sint voluptas quia
+            alias odit! Nesciunt expedita libero accusantium sed quibusdam magni!</p>
+
+          <h3>Small heading 2</h3>
+          <p class="light-text">Paragraph 2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            aliquid, distinctio ipsa pariatur exercitationem voluptate illo accusamus in sint voluptas quia
+            alias odit! Nesciunt expedita libero accusantium sed quibusdam magni!</p>
+
+          <h3>Small heading 3</h3>
+          <p class="light-text">Paragraph 3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            aliquid, distinctio ipsa pariatur exercitationem voluptate illo accusamus in sint voluptas quia
+            alias odit! Nesciunt expedita libero accusantium sed quibusdam magni!</p>
+        </div>
+
+        <h3>Exercise 4.1: <b>Element selector with <span>document.getElementById()</span> syntax</b></h3>
+        <p>Write JS code that captures the string values in two DIVs and outputs the result to the web page and
+          JavaScript Console.</p>
+
+
+        <div class="js-box">
+
+          <div class="js-box-inner">
+
+            <div>First Name:</div>
+            <div id="fName">Laure</div>
+
+            <div>Last Name:</div>
+            <div id="lName">Berthaud</div>
+
+            <div>Full Name:</div>
+            <div id="fullName"></div>
+
+          </div>
+        </div>
+
+        <h3>Exercise 4.2: <b>Element selector with <span>document.querySelector()</span> syntax</b></h3>
+        <p>Write JS code that captures the string values in two form input fields and outputs the result to the
+          web page and JavaScript Console.</p>
+
+        <div class="js-box" style="margin-top: 42px">
+
+          <div class="js-box-inner">
+
+            <form>
+              <ul class="wrapper">
+                <li class="form-row">
+                  <label for="fNameInput">First Name:</label>
+                  <input type="text" id="fNameInput" value="Gilles" disabled>
+                </li>
+                <li class="form-row">
+                  <label for="lNameInput">Last Name:</label>
+                  <input type="text" id="lNameInput" value="Escoffier" disabled>
+                </li>
+                <li class="form-row green">
+                  <label for="fullNameOutput">Full Name:</label>
+                  <input type="text" id="fullNameOutput" disabled>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+
+        <h3>Exercise 4.3: <b>Element selector with <span>document.getElementsByTagName(index)</span> syntax</b>
+        </h3>
+        <p>Within the <b>page-content</b> DIV of the exercises web page, select the third <b>h3</b> heading and
+          output the result to the JavaScript Console.</p>
+
+
+        <h3>Exercise 4.4: <b>Element selector with <span>document.querySelector(.class:nth-of-type(index)</span>
+            syntax</b></h3>
+
+        <p>Within the <b>page-content</b> DIV of the exercises web page, select the second <b>p</b> paragraph of
+          tect and output the result to the JavaScript Console.</p>
+
+      </section>
+
+
+      <script>
+
+        console.log("%c=== EXERCISE 4.1 ===", "color: white; background-color: green; padding: 2px");
+
+        // Create two variables (can use 'const') to capture the text in DIVs
+
+        // Join two strings and display result in DIV
+        // Version 1: concatentation
+
+        // Version 2: template literal
+
+
+        console.log("\n=== OLD JS STYLE CONCATENATION ===")
+        const userFirstName = document.getElementById("fName").innerText;
+        const userLastName = document.getElementById("lName").innerText;
+        const userFullName = userFirstName + " " + userLastName;
+        document.getElementById("fullName").innerText = userFullName;
+
+        const userFirstNameInput = document.getElementById("fNameInput").value;
+        const userLastNameInput = document.getElementById("lNameInput").value;
+        const userFullNameOutput = userFirstNameInput + " " + userLastNameInput;
+        document.getElementById("fullNameOutput").value = userFullNameOutput;
+
+        console.log("\n=== NEW JS STYLE TEMPLATE LITERALS ===")
+
+        console.log("\n%c=== EXERCISE 4.2 ===", "color: white; background-color: green; padding: 2px");
+
+        // Create two variables (can use 'const') to capture the text in input fields
+
+        // Join two strings and display result in web page input field
+
+        // Version 1: concatentation
+        // Version 2: template literal
+
+        console.log("\n=== OLD JS STYLE CONCATENATION ===")
+
+        console.log("\n=== NEW JS STYLE TEMPLATE LITERALS ===")
+        console.log("\n%c=== EXERCISE 4.3 ===", "color: white; background-color: green; padding: 2px");
+        const h3Target = document.getElementsByTagName("h3")[0];
+        h3Target.style.color = "red";
+        h3Target.style.backgroundColor = "blue";
+        h3Target.style.paddingTop = "10px";
+        h3Target.style.paddingBottom = "10px";
+        h3Target.style.paddingLeft = "10px";
+        h3Target.style.fontSize = "42px";
+
+        h3Target.classList.add("text-purple");
+        h3Target.classList.add("background-pink");
+        
+        const pageStuff = document.getElementById("page-content").outerHTML;
+        console.log(pageStuff);
+        const h3_first = document.getElementsByTagName('h3')[0].outerHTML;
+        const h3_second = document.getElementsByTagName('h3')[1].outerHTML;
+        const h3_third = document.getElementsByTagName('h3')[2].outerHTML;
+
+        console.log("First h3 " + h3_first);
+        console.log("Second h3 " + h3_second);
+        console.log("Third h3 " + h3_third);
+
+
+        console.log("\n%c=== EXERCISE 4.4 ===", "color: white; background-color: green; padding: 2px");
+
+        const button = document.getElementById('button_1');
+        button.addEventListener('click', showBtnClick);
+
+        function showBtnclick() {
+            console.log("You clicked button 1");
+        }
+
+        const btn = document.getElementById('btn_1');
+
+        btn.addEventListener('click', (e) => {
+            
+        }
+
+      </script>
+
+    </article>
+  </main>
+</body>
+
+</html>
