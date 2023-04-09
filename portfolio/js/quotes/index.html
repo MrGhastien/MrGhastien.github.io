@@ -105,7 +105,7 @@
     <!-- navigation menu -->
 
     <nav class="container-menu menu-desktop menu-sticky">
-        <a href="#"><img src="../assets/img/website-logo-sample.png" alt="website logo"></a>
+        <a href="../index.html"><img src="../assets/img/website-logo-sample.png" alt="website logo"></a>
         <ul class="">
             <li><a href="../../../index.html">Home</a></li>
             <li><a href="../../portfolio/index.html">Portfolio</a></li>
@@ -163,6 +163,8 @@
                       const upperNum = lowerNum + 9;
                       let html_block = "";
                       for (i= lowerNum; i < upperNum; i++) {
+                          if(!data[i].author)
+                              data[i].author = "Anonymous";
                           html_block = html_block + `<div class="col-3"><p><span>“</span>${data[i].text}<span>”</span></p><h3>${data[i].author}</h3></div>`;
                           document.getElementById("quotes-box").innerHTML = html_block;
                       }
